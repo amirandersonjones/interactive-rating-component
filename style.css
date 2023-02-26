@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #121417;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 375px;
+    height: 475px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-image: linear-gradient(to bottom, #343942, #252d37, #25292e);
+    
+}
+
+#rating-container{
+    display: flex;
+    /* displayed the ratings in reverse in the html to be able to select previous siblings so now we flip them to the correct order using css. */
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+/* hide the radio buttons */
+#rating-container > input{
+    display: none;
+}
+
+/* add styling to the number ratings */
+
+#rating-container > label {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#rating-container>label::before{
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+}
+
+#rating-container>label:hover:before,
+#rating-container>label:hover~label:before {
+    opacity: 1 !important;
+}
+
+#rating-container>input:checked~label:before {
+    color: #fb7413;
+    opacity: 1;
+}
+
+
+h1{
+    font-weight: 700;
+}
+
+p, .numbers {
+    opacity: .50;
+}
+
+.main-image, p, h1, #rating-container {
+    margin: 5px;
+}
+
+button{
+    background-color: #fb7413;
+    color:#ffffff;
+    opacity: .75;
+    padding: 15px 125px;
+    margin-left: 15px;
+    border-radius: 25px;
+    border: none;
+}
+
+button:hover{
+    background-color: #ffffff;
+    color:#fb7413;
+    cursor: pointer;
+}
+
+
+.main-image{
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+
+
+
+
+/* ---------------------rating page--------------- */
+#main-container-2 {
+    display: none; /*flex */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+    height: 475px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-image: linear-gradient(to bottom, #343942, #252d37, #25292e);
+}
+
+/* ---------to show content and style content originally set to display none under #main-container-2----- */
+.inner-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#selected-rating{
+    padding: 0px;
+}
+
+span {
+    color: #fb7413;
+}
+
+.writing {
+    margin-bottom: 10px;
+}
+
+#large-paragraph {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#orange {
+    color: #fb7413;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 8px 12px;
+    opacity: 1;
+}
+
+.opacity {
+    opacity: .50;
+}
+
+
+
+
+@media (min-width: 576px) {
+    #main-container {
+        min-width: 500px;
+    }
+
+    #main-container-2 {
+        min-width: 500px;
+    }
+
+    button {
+        padding: 20px 175px;
+    }
+}
+
+
