@@ -56,6 +56,4 @@ function submit() {
 
     checkSelectedRating()
     
-    ratingContainer.classList.toggle("hide");
-    resultContainer.classList.toggle("show");
 }
